@@ -1,7 +1,7 @@
 <!--
  * @Author: jswang
  * @Date: 2021-06-12 18:49:18
- * @LastEditTime: 2021-06-12 22:13:33
+ * @LastEditTime: 2021-06-12 22:42:20
  * @FilePath: \black_h5\13-大事件项目\big\login.html
 -->
 <!DOCTYPE html>
@@ -38,16 +38,17 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="text" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
                 </div>
                 <!-- 按钮 -->
                 <div class="layui-form-item">
                     <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
                 </div>
+
+                <div class="layui-form-item links">
+                    <a href="javascript:;">去注册账号</a>
+                </div>
             </form>
-            <div class="layui-form-item links">
-                <a href="javascript:;">去注册账号</a>
-            </div>
         </div>
 
         <!-- 注册div -->
@@ -72,12 +73,15 @@
                 <div class="layui-form-item">
                     <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
                 </div>
-
+                <div class="layui-form-item links">
+                    <a href="javascript:;">去登录</a>
+                </div>
             </form>
-            <a href="javascript:;">去登录</a>
+
         </div>
 
     </div>
+    <script src="./assets/lib/layui/layui.all.js"></script>
     <script src="./assets/js/login.js"></script>
 </body>
 
