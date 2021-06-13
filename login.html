@@ -1,7 +1,7 @@
 <!--
  * @Author: jswang
  * @Date: 2021-06-12 18:49:18
- * @LastEditTime: 2021-06-12 22:42:20
+ * @LastEditTime: 2021-06-13 11:14:17
  * @FilePath: \black_h5\13-大事件项目\big\login.html
 -->
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
 
         <!-- 登陆div -->
         <div class="login-box">
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form-login">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -38,7 +38,7 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
                 </div>
                 <!-- 按钮 -->
                 <div class="layui-form-item">
@@ -54,7 +54,7 @@
         <!-- 注册div -->
         <div class="reg-box">
             <!-- 注册表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form-reg">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -63,11 +63,11 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="text" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="text" name="repassword" required lay-verify="required" placeholder="请确认密码" autocomplete="off" class="layui-input">
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请确认密码" autocomplete="off" class="layui-input">
                 </div>
                 <!-- 注册按钮 -->
                 <div class="layui-form-item">
@@ -82,6 +82,7 @@
 
     </div>
     <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/js/baseAPI.js"></script>
     <script src="./assets/js/login.js"></script>
 </body>
 
