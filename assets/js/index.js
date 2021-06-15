@@ -1,11 +1,11 @@
 /*
  * @Author: jswang
  * @Date: 2021-06-13 14:06:23
- * @LastEditTime: 2021-06-13 15:29:31
- * @FilePath: \black_h5\13-大事件项目\big\assets\js\index.js
+ * @LastEditTime: 2021-06-15 12:51:25
+ * @FilePath: \H5\13-大事件项目\big\assets\js\index.js
  */
 $(function() {
-    getUerInfo();
+    getUserInfo();
     let layer = layui.layer;
     //退出
     $('#logout').on('click', function() {
@@ -20,7 +20,7 @@ $(function() {
     })
 
 
-    function getUerInfo() {
+    function getUserInfo() {
         $.ajax({
             type: "GET",
             url: "/my/userinfo",
@@ -50,7 +50,7 @@ $(function() {
 
     function renderAvater(user) {
         // 1获取用户头像
-        let name = user.username || user.nickname;
+        let name = user.nickname || user.username;
         //设置欢迎文本
         $('#welcome').html('欢迎&nbsp;&nbsp;' + name);
         //按需渲染头像
